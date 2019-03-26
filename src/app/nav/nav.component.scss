@@ -10,8 +10,15 @@ $hscreen: 100vh;
 
 // Styles for all device screens
 
+
+
 // Smaller than Xsmall device screens
 @media (max-width: $break_xsmall){
+
+    .navigation:before {
+        content: "Dominik Sar";
+        font-size: 5vh;
+    }
 
     .navigation {
 
@@ -21,7 +28,6 @@ $hscreen: 100vh;
 
         .nav-left {
             display: none;
-
         }
 
         .nav-right {
@@ -51,18 +57,22 @@ $hscreen: 100vh;
 
 }
 
-// Xsmall device screens
+// Xsmall device screens <320px
 @media all and (min-width: $break_xsmall+1) {
 
     .navigation {
 
         width: 100%;
         height: 100%;
-        background-color: aquamarine;
+        background-color: cadetblue;
+        // background: url("../../assets/bg_mobile_480.svg") no-repeat;
+        // background-position: center bottom;
+        // background-size: cover;
+        
         //border: 1px solid black;
 
         .nav-left {
-
+            
             .face {
                 //border: 1px solid green;
                 display: block;
@@ -70,7 +80,6 @@ $hscreen: 100vh;
                 margin-right: auto;
                 height: 30vh;
                 max-width: 30vh;
-
                 padding: 4vh 0;
             }
 
@@ -89,6 +98,7 @@ $hscreen: 100vh;
                     width: 100vw;
                     text-align: center;
                     padding: 1vh;
+                    
 
                     a:hover {
                         color: purple;
@@ -124,7 +134,7 @@ $hscreen: 100vh;
                         text-decoration: none;
                         font-size: 3vh;
                         font-family: 'Courier New', Courier, monospace;
-                        //font-weight: bold;
+                        font-weight: bold;
                     }
                 }
 
@@ -135,4 +145,139 @@ $hscreen: 100vh;
 
     }
 
+}
+
+// Small device screens >480px
+@media all and (min-width: $break_small+1) {
+
+    .navigation {
+
+        .nav-left {
+
+            .face {
+                //border: 1px solid green;
+                padding: 4vh 8vw;
+                background: url("../../assets/bg_face.svg") no-repeat;
+                background-size: 50vw 40vh;
+                background-position: bottom;
+            }
+
+        }
+
+        .nav-right {
+            margin-top: 4vh;
+            ul {
+                
+                li {
+                    width: 46vw;
+                    height: 10vh;
+                    float: left;
+                    padding: 1vh 1vw;
+                    background: url("../../assets/bg_button.svg") no-repeat;
+                    background-size: 40vw 20vh;
+                    background-position: center;
+
+
+                    a {
+                        font-size: 3vh;
+                        font-family: fantasy;
+                        text-align: center;
+                        
+                    }
+
+                }
+
+                li:hover {
+                    background: url("../../assets/bg_button_hover.svg") no-repeat;
+                    background-size: 40vw 25vh;
+                    background-position: center;
+                }
+
+                li:before {
+                    content: url("../../assets/arrow.svg") ;
+
+                    padding-right: 10px; 
+                }
+
+            }
+
+                
+
+
+        }
+
+
+    }
+}
+
+// Medium device screens >768px+
+@media all and (min-width: $break_medium+1) {
+
+    .navigation {
+
+        .nav-right {
+
+            ul {
+
+                
+                li {
+                    width: 22.4vw;
+                    height: 10vh;
+                    float: left;
+                    padding: 1vh 1vw;
+                    background: url("../../assets/bg_button.svg") no-repeat;
+                    background-size: 40vw 20vh;
+                    background-position: center;
+                }
+            }
+        }
+
+    }
+}
+
+// Large device screens >1366px+
+@media all and (min-width: $break_large+1) {
+
+    .navigation {
+
+        .nav-right {
+
+            ul {
+
+                li {
+                    width: 12.1vw;
+                    height: 10vh;
+                    float: left;
+                    padding: 1vh 1vw;
+                    background: url("../../assets/bg_button.svg") no-repeat;
+                    background-size: 40vw 20vh;
+                    background-position: center;
+                }
+            }
+        }
+
+    }
+}
+
+// Xlarge device screens >1920px+
+@media all and (min-width: $break_xlarge+1){
+    .navigation {
+
+        .nav-right {
+
+            ul {
+
+                li {
+                    width: 12.1vw;
+                    height: 10vh;
+                    float: left;
+                    padding: 1vh 1vw;
+                    background: url("../../assets/bg_button.svg") no-repeat;
+                    background-size: 40vw 20vh;
+                    background-position: center;
+                }
+            }
+        }
+
+    }
 }

@@ -2,15 +2,35 @@
   <a class="nav-left" [routerLink]="['/']">
     <img class="face" src="../../assets/face.png">
   </a>
+  <!-- add social media -->
+  <!-- <div id="social-media">
+    <a class="social-media">
+      <img class="github" src="../../assets/">
+    </a>
+  </div> -->
   <nav class="nav-right">
     <ul>
-      <li><a [routerLink]="['/about']">about</a></li>
-      <li><a [routerLink]="['/school']">school</a></li>
-      <li><a [routerLink]="['/experiance']">experiance</a></li>
-      <li><a [routerLink]="['/skills']">skills</a></li>
-      <li><a [routerLink]="['/projects']">projects</a></li>
-      <li><a [routerLink]="['/interests']">interests</a></li>
-      <li><a [routerLink]="['/contact']">contact</a></li>
+      <li>
+        <a [routerLink]="['/about']">{{title.about}}</a>
+      </li>
+      <li>
+        <a [routerLink]="['/school']">{{title.school}}</a>
+      </li>
+      <li>
+        <a [routerLink]="['/experiance']">{{title.experiance}}</a>
+      </li>
+      <li>
+        <a [routerLink]="['/skills']">{{title.skills}}</a>
+      </li>
+      <li>
+        <a [routerLink]="['/projects']">{{title.projects}}</a>
+      </li>
+      <li>
+        <a [routerLink]="['/interests']">{{title.interests}}</a>
+      </li>
+      <li>
+        <a [routerLink]="['/contact']">{{title.contact}}</a>
+      </li>
     </ul>
   </nav>
 </header>
