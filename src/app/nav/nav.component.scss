@@ -13,27 +13,23 @@ $hscreen: 100vh;
 .nav-wrapper {
     padding: 0;
     margin: 0;
-
 }
 
 // Smaller than Xsmall device screens
 @media (max-width: $break_xsmall){
 
     .menu{
-        position: absolute;
-        width: 100vw;
+        position: relative;
+        width: $wscreen;
         height: 10vh;
-        
-
-
         .basisNav {
-            width: 100vw;
+            width: $wscreen;
             height: 50px;
-            background-color: #b16a2e;
+            background-color: #554f4b;
             .face {
               height: 50px;
               position: absolute;
-              margin: auto;
+              margin: 0 auto;
               left: 0;
               right: 0;
             }
@@ -121,8 +117,9 @@ $hscreen: 100vh;
         .nav-wrapper {
             display: none;
             &.on-wrapper {
-                background-color: #cc7833;
+                background-color: #696867;
                 position: relative;
+                z-index: 1;
                 display: block;
                 width: 100%;
     
@@ -132,7 +129,8 @@ $hscreen: 100vh;
                     a {
                         text-decoration: none;
                         font-weight: 4vh;
-                        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                        color: lightgray;
+                        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
                     }
                     
                 }
@@ -150,14 +148,14 @@ $hscreen: 100vh;
 // Xsmall device screens >320px
 @media (min-width: $break_xsmall+1) and (max-width: $break_medium){
   .menu{
-    position: absolute;
+    position: relative;
     width: 100vw;
     height: 10vh;
     
     .basisNav {
         width: 100vw;
         height: 70px;
-        background-color: #b16a2e;
+        background-color: #554f4b;
         
         .face {
           height: 70px;
@@ -250,11 +248,12 @@ $hscreen: 100vh;
     .nav-wrapper {
         display: none;
         &.on-wrapper {
-          border-top: 1px outset  grey;
-            background-color: #cc7833;
+            border-top: 1px outset  grey;
+            background-color: #696867;
             position: relative;
+            z-index: 1;
             display: block;
-            //width: 100%;
+            width: 100%;
 
             li {
                 text-align: center;
@@ -262,6 +261,7 @@ $hscreen: 100vh;
                 a {
                     text-decoration: none;
                     font-weight: 6vh;
+                    color: lightgray;
                     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                 }
                 
@@ -285,10 +285,10 @@ $hscreen: 100vh;
 @media (min-width: $break_medium+1){
 
   .menu {
-    //position: absolute;
+    position: relative;
     width: 100vw;
     height: 120px;
-    background-color: #b16a2e;
+    background-color: #554f4b;
     .basisNav {
       height: 100px;
       //background-color: #b16a2e;
@@ -321,10 +321,10 @@ $hscreen: 100vh;
         a {
           text-decoration: none;
           font-weight: bold;
-          color: #D9C192; 
+          color: lightgray; 
 
           &:hover {
-            color: lightgray;
+            color: gray;
           }
           
 
