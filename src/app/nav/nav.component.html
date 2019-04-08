@@ -1,15 +1,14 @@
-<header class="navigation">
-  <a class="nav-left" [routerLink]="['/']">
-    <img class="face" src="../../assets/face.png">
-  </a>
-  <!-- add social media -->
-  <!-- <div id="social-media">
-    <a class="social-media">
-      <img class="github" src="../../assets/">
-    </a>
-  </div> -->
-  <nav class="nav-right">
-    <ul>
+<header>
+  <nav class="menu">
+    <div class="basisNav" >
+      <img class="face" src="../../assets/face.png" alt="face">
+        <div class="burger" >
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+      </div>
+    <ul class="nav-wrapper">
       <li>
         <a [routerLink]="['/about']">{{title.about}}</a>
       </li>
@@ -34,3 +33,6 @@
     </ul>
   </nav>
 </header>
+
+
+
